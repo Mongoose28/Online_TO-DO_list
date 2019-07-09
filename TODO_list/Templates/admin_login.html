@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>admin_login</title>
+    <style>
+         body{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: url(admin.jpg) no-repeat;
+        background-size: cover;
+        }
+
+        .login-box{
+        width: 320px;
+        height: 420px;
+        background: rgba(0,0,0,0.5);
+        color: #fff;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+
+        transform: translate(-50%,-50%);
+        box-sizing: border-box;
+        padding: 70px 30px;
+        }
+
+        .avatar{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        position: absolute;
+        top: -50px;
+        left: calc(50% - 50px);
+        }
+
+        h1{
+        margin: 0;
+        padding: 0 0 20px;
+        text-align: center;
+        font-size: 22px;
+
+        }
+        .login-box p{
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+
+        }
+
+        .login-box input{
+        width: 100%;
+        margin-bottom: 20px;
+
+        }
+
+        .login-box input[type="text"], input[type="password"]
+        {
+        border: none;
+        border-bottom: 2px solid white;
+        background: transparent;
+        outline: none;
+        height: 40px;
+        color: #fff;
+        font-size: 16px;
+
+
+
+        }
+
+
+        .login-box input[type="submit"]
+        {
+        border: none;
+        outline: none;
+        height: 40px;
+        background: #F77F46;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 20px;
+
+
+
+        }
+
+
+         .login-box a{
+         text-decoration: none;
+         font-size: 14px;
+         color: #fff;
+
+
+         }
+
+
+
+
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="login-box">
+        <img src="logo.png" class="avatar">
+        <h1>Admin Login</h1>
+        <form>
+            <p>Username</p>
+            <input type="text" name="Admin_mail" placeholder="mail">
+            <p>Password</p>
+            <input type="password" name="Password" placeholder="Password">
+            <input type="submit" name="submit" value="Login">
+            <a href="#">Forget password</a>
+
+        </form>
+
+
+
+    </div>
+
+</body>
+</html>
