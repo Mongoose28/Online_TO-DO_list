@@ -69,22 +69,20 @@
 
 <h1>Sign Up Here</h1>
 <div class="register">
-    <form method="post" id="register" action="">
-        <label>First Name:</label><br>
-        <input type="text" name="Fname" id="name" placeholder="Enter first name"><br><br>
-        <label>Last Name:</label><br>
-        <input type="text" name="lname" id="name" placeholder="Enter last name"><br><br>
-        <label>Phone:</label><br>
-        <input type="number" name="phonennum" id="name" placeholder="Enter phone number"><br><br>
+    <form method="POST" id="register" action="">
+            {% csrf_token %}
+
+
+        <label> Name:</label><br>
+        <input type="text" name="x1"  placeholder="Enter user name"><br><br>
+
+
         <label>Email:</label><br>
-        <input type="email" name="mail" id="name" placeholder="Enter your mail id"><br><br>
+        <input type="email" name="x2"  placeholder="Enter your mail id"><br><br>
         <label>Password:</label><br>
-        <input type="Password" name="Password" id="name" placeholder="Enter password"><br><br>
-        <label>Confirm Password:</label><br>
-        <input type="Password" name="Password" id="name" placeholder="Confirm password"><br><br>
-        <input type="radio" name="male" id="male"><span id="male1">&nbsp; Male</span>&nbsp;&nbsp;
-        <input type="radio" name="male" id="female"><span id="female1">&nbsp; Female</span>&nbsp;&nbsp;
-        <input type="radio" name="male" id="others"><span id="other">&nbsp; Other</span>&nbsp;&nbsp;<br><br>
+        <input type="Password" name="x3" placeholder="Enter password"><br><br>
+
+
         <input type="submit" value="submit" id="sub">
 
 

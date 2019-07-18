@@ -1,8 +1,10 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from list.models import List
+from list import models
 from .forms import ListForm
 from django.contrib import messages
+
 
 def login(request):
     return render(request,'login.html')
@@ -54,3 +56,18 @@ def edit(request, list_id):
     else:
         task = List.objects.get(pk=list_id)
         return render(request,'edit.html',{'task': task})
+
+
+def register(request):
+     if request.method == 'POST':
+         x1 = request.POST.get('x1')
+         x2 = request.POST.get('x2')
+         x3 = request.POST.get('x3')
+
+         x4 = models.register(username=x1,password=x2,email=x3)
+         x4.save()
+         print(x1,x2,x3)
+         if x4:
+             return render(request,'login.html')
+     else:
+         return render(request,'Sign_up.html')
