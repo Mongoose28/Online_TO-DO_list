@@ -68,6 +68,6 @@ def register(request):
          x4.save()
          print(x1,x2,x3)
          if x4:
-             return render(request,'login.html')
+             return render(request,'Sign_up.html')
      else:
          return render(request,'Sign_up.html')
