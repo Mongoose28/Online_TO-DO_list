@@ -1,79 +1,41 @@
 {%load static%}
 <!DOCTYPE html>
 <html lang="en">
-
- <ul>
-     <li><a href="Sign_up.html">Sign_up</a></li>
-     <li><a href="admin_login.html">Admin_login</a></li>
-     <li><a>About</a></li>
-     <li><a>Contact_us</a></li>
-
+<ul>
+    <li><a href="Sign_up.html">Sign_up</a></li>
+    <li><a href="admin_login.html">Admin_login</a></li>
+    <li><a>About</a></li>
+    <li><a>Contact_us</a></li>
 
 
- </ul>
+
+</ul>
+
 <head>
     <meta charset="UTF-8">
     <title>login</title>
-      <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+
 </head>
 <body>
-      <div class="login-box">
+
+    <div class="login-box">
+        <img src="{%static 'C:\Users\Mongoose28\Documents\GitHub\Online_TO-DO_list\TODO_list\static\logo.png'%}" class="avatar">
         <h1>Login</h1>
+        <form method="POST" id="login-box" action="">
+            {% csrf_token %}
+            <p>Username</p>
+            <input type="text" name="m1" placeholder="Username">
+            <p>Password</p>
+            <input type="password" name="m2" placeholder="Password">
+            <input type="submit" name="" value="Login">
+            <a href="#">Forget password</a>
 
-  <form method="POST" id="register" action="">
-                      {% csrf_token %}
-        <div class="textbox">
-
-            <input type="text" placeholder="Email" name="mail" id="username">
-
-        </div>
+        </form>
 
 
-
-         <div class="textbox">
-            <input type="password" placeholder="Password" name="password"id="password">
-
-        </div>
-
-              <input class="btn" type="submit" name="" value="Login in">
 
     </div>
-  </form>
-
-  <script>
-      var attempt = 3;
-      function validate(){
-        var username = document.getElementById("username").value;
-        var password = document.getElementById("password").value;
-        if ((username == "nahian" && password == "1234") ){
-        window.location = "home";
-        return false;
-      }
-      else{
-        attempt --;
-        alert ("you have left "+attempt+" attempt;");
-        if(attempt == 0)
-        {
-          document.getElementById("username").disabled=true;
-          document.getElementById("password").disabled=true;
-          document.getElementById("submit").disabled=true;
-          return false;
-
-        }
-      }
-
-
-      }
-
-
-
-
-      }
-
-
-
-
-  </script>
 
 </body>
 </html>
